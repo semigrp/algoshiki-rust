@@ -11,10 +11,10 @@ fn main() {
         .map(|x| x.parse().expect("Not an integer!"))
         .collect();
 
-    let res = if inputs[1] < inputs[0] {
-        inputs[1]
-    } else {
+    let res = if inputs[0] % 10 < inputs[1] % 10 {
         inputs[0]
+    } else {
+        inputs[1]
     };
 
     println!("{}", res);
